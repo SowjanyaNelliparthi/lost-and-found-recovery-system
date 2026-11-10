@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: lost-found-recovery
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
+    healthCheckPath: /api/health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lost-found-db
+          property: connectionString
+
+databases:
+  - name: lost-found-db
+    databaseName: lost_found
+    user: lost_found
+    plan: free
+    postgresMajorVersion: "16"

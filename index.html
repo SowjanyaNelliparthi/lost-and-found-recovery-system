@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lost & Found — Item Recovery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><div class="brand-mark">⌕<span>□</span></div><strong>Lost &amp; Found</strong><small>Recover · Reunite · Smile</small></div>
+    <nav id="main-nav" aria-label="Main navigation">
+      <button class="nav-link active" data-page="home"><span>⌂</span>Home</button>
+      <button class="nav-link" data-page="assistant"><span>✦</span>AI Assistant</button>
+      <button class="nav-link" data-page="lost-form"><span>⚠</span>Report Lost Item</button>
+      <button class="nav-link" data-page="found-form"><span>♧</span>Report Found Item</button>
+      <button class="nav-link" data-page="lost"><span>▤</span>View Lost Items</button>
+      <button class="nav-link" data-page="found"><span>⬡</span>View Found Items</button>
+      <button class="nav-link" data-page="search"><span>⌕</span>Search Items</button>
+      <button class="nav-link" data-page="matches"><span>✣</span>Find Possible Matches</button>
+      <button class="nav-link" data-page="verify"><span>☑</span>Verify Item Match</button>
+      <button class="nav-link" data-page="status"><span>⟳</span>Update Recovery Status</button>
+      <button class="nav-link" data-page="recovered"><span>✓</span>View Recovered Items</button>
+      <button class="nav-link" data-page="reports"><span>▥</span>Reports</button>
+    </nav>
+    <div class="sidebar-note">Lost items find<br>their way back!<br><span>♡</span></div>
+    <button class="nav-link exit-link" id="reset-demo"><span>↻</span>Reset Demo Data</button>
+  </aside>
+  <main class="main-area">
+    <header class="topbar"><div><h1>Lost and Found Item Recovery Management System</h1><p>Smart Search · Keyword Matching · Faster Recovery</p></div><div class="admin"><button class="bell" aria-label="Notifications">♧<i></i></button><span class="avatar" id="user-avatar">A</span><strong id="user-name">Guest</strong><button class="button small" id="auth-toggle">Login / Register</button><button class="button small secondary" id="logout-button" hidden>Logout</button></div></header>
+    <div id="page-content"></div>
+    <footer>Lost &amp; Found Recovery · Signed-in reports are saved in the local server database.</footer>
+  </main>
+</div>
+<dialog id="message-dialog"><div class="dialog-head"><strong id="dialog-title">Notice</strong><button id="dialog-close" aria-label="Close">×</button></div><div id="dialog-body"></div></dialog>
+<dialog id="auth-dialog"><div class="dialog-head"><strong id="auth-title">Login or register</strong><button id="auth-close" aria-label="Close">×</button></div><div id="auth-body"></div></dialog>
+<script src="app.js"></script>
+</body>
+</html>

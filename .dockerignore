@@ -1,0 +1,13 @@
+.git
+.codex-build
+Submission
+data
+.env
+node_modules
+README.md
+render.yaml
+web-version
+__pycache__
+*.py[cod]
+.venv
+venv

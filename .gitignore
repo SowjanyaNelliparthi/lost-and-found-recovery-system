@@ -1,0 +1,13 @@
+.env
+data/
+node_modules/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.codex-build/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+web-version/
+screenshots/*.png
